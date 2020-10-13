@@ -3,8 +3,8 @@ import "./contact.css";
 import PropTypes from "prop-types";
 
 const Contact = (props) => {
-  const statusIndicator = props.isOnline ? "status-online" : "status-offline";
-  const status = props.isOnline ? "Online" : "Offline";
+  const statusIndicator = props.online ? "status-online" : "status-offline";
+  const status = props.online ? "Online" : "Offline";
 
   return (
     <div className="Contact">
