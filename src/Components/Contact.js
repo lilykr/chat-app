@@ -2,15 +2,15 @@ import React from "react";
 import "./contact.css";
 import PropTypes from "prop-types";
 
-const Contact = (props) => {
-  const statusIndicator = props.online ? "status-online" : "status-offline";
-  const status = props.online ? "Online" : "Offline";
+const Contact = ({avatar,name, online}) => {
+  const statusIndicator = online ? "status-online" : "status-offline";
+  const status = online ? "Online" : "Offline";
 
   return (
     <div className="Contact">
-      <img className="avatar" src={props.avatar} alt={props.name} />
+      <img className="avatar" src={avatar} alt={name} />
       <div>
-        <h3 className="name">{props.name}</h3>
+        <h3 className="name">{name}</h3>
         <div className="status">
           <div className={statusIndicator} />
           <p className="status-text">{status}</p>

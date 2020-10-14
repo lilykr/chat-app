@@ -35,9 +35,7 @@ const ContactList = () => {
         {users.map(item => (
             <div>
                 <Contact 
-                name={item.name}
-                avatar={item.avatar}
-                online={item.online}
+                {...item} 
                 />
             </div>
         ))}
